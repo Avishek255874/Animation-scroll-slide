@@ -12,19 +12,26 @@ gsap.registerPlugin(ScrollTrigger)
             gsap.fromTo(text.chars, 
                 {
                     color: bg,
+                    y:-20,
+                    transfromOrigin: 'top',
+                 
                 },
                 {
-                    color: fg,
+                    color: fg, 
+                scaleY: 1,
+                y:0,
+                opacity:0,
                     duration: 0.3,
                     stagger: 0.02,
                     scrollTrigger: {
                         trigger: char,
                         start: 'top 80%',
                         end: 'top 20%',
-                        scrub: true,
+                        scrub: false,
                         markers: false,
                         toggleActions: 'play play reverse reverse'
-                    }
+                    },
+            
             })
         })
 
